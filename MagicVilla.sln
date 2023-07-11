@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicVilla_VillaAPI", "MagicVilla_VillaAPI\MagicVilla_VillaAPI.csproj", "{54153F0C-DE86-4698-A7A5-0C89A85779A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagicVilla_VillaAPI", "MagicVilla_VillaAPI\MagicVilla_VillaAPI.csproj", "{54153F0C-DE86-4698-A7A5-0C89A85779A6}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{9B95534F-B768-42D4-BDE2-508A0896B02D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{54153F0C-DE86-4698-A7A5-0C89A85779A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54153F0C-DE86-4698-A7A5-0C89A85779A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54153F0C-DE86-4698-A7A5-0C89A85779A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B95534F-B768-42D4-BDE2-508A0896B02D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B95534F-B768-42D4-BDE2-508A0896B02D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B95534F-B768-42D4-BDE2-508A0896B02D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B95534F-B768-42D4-BDE2-508A0896B02D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

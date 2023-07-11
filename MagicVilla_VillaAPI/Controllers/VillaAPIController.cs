@@ -81,6 +81,8 @@ namespace MagicVilla_VillaAPI.Controllers
             return Ok(_response);
         }
 
+        
+
         [HttpPost]
         [Authorize(Roles = "admin")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -116,7 +118,7 @@ namespace MagicVilla_VillaAPI.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [HttpDelete("{id:int}", Name = "DeleteVilla")]
-        [Authorize(Roles = "CUSTOM")]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> DeleteVilla(int id)
         {
             if (id == 0) return BadRequest();
@@ -172,7 +174,7 @@ namespace MagicVilla_VillaAPI.Controllers
 
                 var villa = await _dbVilla.GetAsync(u => u.Id == id, false);
 
-                VillaUpdateDTO villaDTO = _mapper.Map<VillaUpdateDTO>(patchDTO);
+                VillaUpdateDTO villaDTO = _mapper.Map<VillaUpdateDTO>(villa);
 
                 if (villa == null)
                 {

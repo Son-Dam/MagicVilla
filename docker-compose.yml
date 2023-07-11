@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  magicvilladb:
+    container_name: magic-villa-db
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - 8002:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Abc@123456
+  magicvilla_villaapi:
+    container_name: magic-villa-app
+    image: ${DOCKER_REGISTRY-}magicvillavillaapi
+    build:
+      context: .
+      dockerfile: MagicVilla_VillaAPI/Dockerfile
+    ports:
+      - 8001:80
+    depends_on:
+      - magicvilladb
+    environment:
+      - DB_HOST=magicvilladb
+    
+
+  

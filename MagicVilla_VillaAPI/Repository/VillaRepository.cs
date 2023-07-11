@@ -32,7 +32,7 @@ namespace MagicVilla_VillaAPI.Repository
             }
             return await query.FirstOrDefaultAsync();
         }
-
+        
         public async Task<List<Villa>> GetAllAsync(Expression<Func<Villa,bool>> filter = null)
         {
             IQueryable<Villa> query = _db.Villas;
