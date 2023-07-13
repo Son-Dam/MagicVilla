@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MagicVilla_VillaAPI.Models
+namespace MagicVilla_UserAuthAPI.Models
 {
     public class LocalUser
     {

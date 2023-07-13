@@ -159,7 +159,7 @@ namespace MagicVilla_VillaAPI.Controllers
             return Ok(_response);
         }
 
-        [HttpPatch]
+        [HttpPatch("{id:int}",Name = "PatchAPI")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> PatchVilla(int id, JsonPatchDocument<VillaUpdateDTO> patchDTO)

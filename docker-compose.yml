@@ -15,12 +15,23 @@ services:
     build:
       context: .
       dockerfile: MagicVilla_VillaAPI/Dockerfile
-    ports:
-      - 8001:80
     depends_on:
       - magicvilladb
     environment:
       - DB_HOST=magicvilladb
-    
-
-  
+  apigateway:
+    container_name: api-gateway
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: APIGateway/Dockerfile
+    ports:
+      - 8001:80
+  magicvilla_userauthapi:
+    container_name: user-authen-app
+    image: ${DOCKER_REGISTRY-}magicvillauserauthapi
+    build:
+      context: .
+      dockerfile: MagicVilla_UserAuthAPI/Dockerfile
+    depends_on:
+      - magicvilladb

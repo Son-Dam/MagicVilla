@@ -5,7 +5,9 @@
       "commandVersion": "1.0",
       "serviceActions": {
         "magicvilla_unittest": "StartDebugging",
-        "magicvilla_villaapi": "StartDebugging"
+        "magicvilla_villaapi": "StartDebugging",
+        "apigateway": "StartDebugging",
+        "magicvilla_userauthapi": "StartDebugging"
       }
     }
   }

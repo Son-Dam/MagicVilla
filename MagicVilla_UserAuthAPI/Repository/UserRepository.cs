@@ -1,14 +1,14 @@
 ﻿using Azure.Identity;
-using MagicVilla_VillaAPI.Data;
-using MagicVilla_VillaAPI.Models;
-using MagicVilla_VillaAPI.Models.DTO;
-using MagicVilla_VillaAPI.Repository.Irepository;
+using MagicVilla_UserAuthAPI.Data;
+using MagicVilla_UserAuthAPI.Models;
+using MagicVilla_UserAuthAPI.Models.DTO;
+using MagicVilla_UserAuthAPI.Repository.Irepository;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace MagicVilla_VillaAPI.Repository
+namespace MagicVilla_UserAuthAPI.Repository
 {
     public class UserRepository : IUserRepository
     {

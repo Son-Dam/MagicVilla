@@ -1,9 +1,9 @@
-﻿using MagicVilla_VillaAPI.Models;
+﻿using MagicVilla_UserAuthAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace MagicVilla_VillaAPI.Data
+namespace MagicVilla_UserAuthAPI.Data
 {
     public class ApplicationDbContext : DbContext
     {
@@ -13,12 +13,12 @@ namespace MagicVilla_VillaAPI.Data
 
         }
 
+        public DbSet<LocalUser> LocalUsers { get; set; }
         
-        public DbSet<Villa> Villas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Villa>().Property(b => b.CreatedDate).HasDefaultValueSql("getdate()");
+           
         }
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)

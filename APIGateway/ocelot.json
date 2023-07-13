@@ -1,0 +1,55 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/VillaAPI",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "magicvilla_villaapi",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/VillaAPI"
+    },
+    {
+      "UpstreamPathTemplate": "/api/VillaAPI/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Patch", "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "magicvilla_villaapi",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/VillaAPI/{id}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Users/login",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "magicvilla_userauthapi",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Users/login"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Users/register",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "magicvilla_userauthapi",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Users/register"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:800"
+  }
+}

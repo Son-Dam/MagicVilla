@@ -20,7 +20,6 @@ builder.Services.AddDbContext<ApplicationDbContext>( options =>
 
 builder.Services.AddAutoMapper(typeof(MappingConfig));
 builder.Services.AddScoped<IVillaRepository, VillaRepository>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 var key = builder.Configuration.GetValue<string>("ApiSettings:Secret");
 builder.Services.AddAuthentication(x =>
@@ -95,7 +94,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+
 app.UseAuthentication();
 app.UseRouting();
 app.UseAuthorization();
